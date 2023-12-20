@@ -1,0 +1,41 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Gabarito", sans-serif;
+}
+* body {
+  background: #141c2f;
+}
+
+header {
+  background: #0d2053;
+  width: 100%;
+  height: 4rem;
+  color: #fff;
+}
+header nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  max-width: 1400px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 0.25rem;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1rem 0.25rem;
+  color: #fff;
+}
+.home .column-chart-container {
+  width: 25rem;
+  aspect-ratio: 2/1;
+}/*# sourceMappingURL=style.css.map */

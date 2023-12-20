@@ -1,0 +1,54 @@
+@mixin flex($fd, $jc, $ai) {
+    display: flex;
+    flex-direction: $fd;
+    justify-content: $jc;
+    align-items: $ai;
+}
+
+$bg-primary-1: #1f2a48;
+$bg-primary-2: #2b3b69;
+$options-bg : #4b63a0;
+$bg-hover: #405691;
+$button-bg: #066edd;
+$body-bg: #141c2f;
+$header-bg: #0d2053;
+$gray-color: #dfdfdf;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Gabarito', sans-serif;
+
+    body {
+        background: $body-bg;
+    }
+}
+
+header {
+    background: $header-bg;
+    width: 100%;
+    height: 4rem;
+    color: #fff;
+
+    nav {
+        @include flex(row, flex-start, center);
+        max-width: 1400px;
+        height: 100%;
+        margin: 0 auto;
+        padding: 0 0.25rem;
+    }
+}
+
+.home {
+    @include flex(column, flex-start, flex-start);
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 1rem 0.25rem;
+    color: #fff;
+
+    .column-chart-container {
+        width: 25rem;
+        aspect-ratio: 2/1;
+    }
+}
