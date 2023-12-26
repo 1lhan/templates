@@ -4,6 +4,7 @@ import { Outlet, RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Home from './Home.jsx'
 import Header from './Header.jsx'
 import './style.css'
+import './styles/CustomSelectStyle.css'
 
 const router = createBrowserRouter([
     {
@@ -17,4 +18,6 @@ const router = createBrowserRouter([
     }
 ])
 
-ReactDOM.createRoot(document.getElementById('root')).render(<RouterProvider router={router} />)
+ReactDOM.createRoot(document.getElementById('root')).render(
+    <RouterProvider router={router} />
+)

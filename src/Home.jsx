@@ -1,7 +1,8 @@
-import ColumnChart from "./ColumnChart";
+import { useSignal } from "@preact/signals-react";
+import ColumnChart from "./templates/ColumnChart";
+import CustomSelect from "./templates/CustomSelect";
 
 export default function Home() {
-
     const data = [
         { date: "2023.01.01", value: 42 }, { date: "2023.01.02", value: 73 }, { date: "2023.01.03", value: 17 }, { date: "2023.01.04", value: 89 }, { date: "2023.01.05", value: 12 }, { date: "2023.01.06", value: 56 },
         { date: "2023.01.07", value: 28 }, { date: "2023.01.08", value: 95 }, { date: "2023.01.09", value: 64 }, { date: "2023.01.10", value: 37 }, { date: "2023.01.11", value: 81 }, { date: "2023.01.12", value: 23 },
@@ -10,13 +11,14 @@ export default function Home() {
         { date: "2023.01.25", value: 88 }, { date: "2023.01.26", value: 31 }, { date: "2023.01.27", value: 75 }, { date: "2023.01.28", value: 10 }, { date: "2023.01.29", value: 67 }, { date: "2023.01.30", value: 41 }
     ]
 
+    const selectFruit = useSignal('select-fruit')
+
     return (
         <div className="home">
             <div className="column-chart-container">
-                <ColumnChart data={data} headerText='Column Chart' valueKey='value'
-                    fontColor='#fff' headerBg='#0d2053' chartBg='#1f2a48' columnsBg='#066edd' toolTipBg='#405691'
-                />
+                <ColumnChart data={data} headerText='Column Chart' valueKey='value' />
             </div>
+            <CustomSelect id={'custom-select'} state={selectFruit} options={['apple', 'banana', 'pear', 'watermelon', 'cherry', 'stawberry']} />
         </div>
     )
 }

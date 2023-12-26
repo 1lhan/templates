@@ -27,15 +27,18 @@ header nav {
 
 .home {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem 0.5rem;
   max-width: 1400px;
   margin: 0 auto;
   padding: 1rem 0.25rem;
   color: #fff;
 }
 .home .column-chart-container {
-  width: 25rem;
+  width: 100%;
+  max-width: 25rem;
   aspect-ratio: 2/1;
 }/*# sourceMappingURL=style.css.map */

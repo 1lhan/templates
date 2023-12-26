@@ -1,0 +1,58 @@
+.custom-select {
+  position: relative;
+  width: 10.75rem;
+  height: 2.5rem;
+  text-transform: capitalize;
+}
+.custom-select .current-value {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  height: 100%;
+  padding: 0 0.5rem;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.custom-select .current-value span {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.custom-select .current-value .fa-caret-down {
+  display: none;
+}
+.custom-select .checkbox {
+  display: none;
+}
+.custom-select .checkbox:checked ~ .values {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.custom-select .checkbox:checked ~ .current-value .fa-caret-up {
+  display: none;
+}
+.custom-select .checkbox:checked ~ .current-value .fa-caret-down {
+  display: block;
+}
+.custom-select .values {
+  display: none;
+  position: absolute;
+  top: calc(100% + 0.25rem);
+  left: 0;
+  width: 100%;
+  border-radius: 3px;
+  overflow: hidden;
+}
+.custom-select .values label {
+  width: 100%;
+  padding: 0.5rem 0.5rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  cursor: pointer;
+}/*# sourceMappingURL=CustomSelectStyle.css.map */

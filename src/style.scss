@@ -41,14 +41,17 @@ header {
 }
 
 .home {
-    @include flex(column, flex-start, flex-start);
+    @include flex(row, flex-start, flex-start);
+    flex-wrap: wrap;
+    gap: 1rem 0.5rem;
     max-width: 1400px;
     margin: 0 auto;
     padding: 1rem 0.25rem;
     color: #fff;
 
     .column-chart-container {
-        width: 25rem;
+        width: 100%;
+        max-width: 25rem;
         aspect-ratio: 2/1;
     }
 }

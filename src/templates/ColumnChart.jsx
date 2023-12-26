@@ -1,8 +1,14 @@
 import { useState } from "react";
 
-export default function ColumnChart({ data, headerText, valueKey, fontColor, headerBg, chartBg, columnsBg, toolTipBg }) {
+export default function ColumnChart({ data, headerText, valueKey }) {
     const topPoint = +(data.slice().sort((a, b) => b[valueKey] - a[valueKey])[0][valueKey] * 1.25)
     const [toolTipValue, setToolTipValue] = useState({})
+
+    const fontColor = '#fff';
+    const headerBg = '#0d2053';
+    const chartBg = '#1f2a48';
+    const columnsBg = '#066edd';
+    const toolTipBg = '#405691';
 
     const styles = {
         columnChartWrapper: {
@@ -51,7 +57,7 @@ export default function ColumnChart({ data, headerText, valueKey, fontColor, hea
             position: 'absolute',
             top: 'calc(100% + 0.25rem)',
             padding: '0.5rem',
-            borderRadius: '3px',
+            borderRadius: '3px'
         },
         toolTipChildren: {
             display: 'flex',
@@ -67,7 +73,7 @@ export default function ColumnChart({ data, headerText, valueKey, fontColor, hea
         },
         toolTipChildrenSpan2: {
             fontWeight: '600',
-        },
+        }
     }
 
     return (
