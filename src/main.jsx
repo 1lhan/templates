@@ -5,6 +5,7 @@ import Home from './Home.jsx'
 import Header from './Header.jsx'
 import './style.css'
 import './styles/CustomSelectStyle.css'
+import './styles/lineChartStyle.css'
 
 const router = createBrowserRouter([
     {
