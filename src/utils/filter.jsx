@@ -1,4 +1,5 @@
 export const filter = (_value, searchParams, setSearchParams) => {
+    // _value iki parametre olmalı, örnek : ['fruit','apple']
     let key = _value[0]
     let value = _value[1]
 
