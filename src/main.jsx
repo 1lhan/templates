@@ -6,6 +6,7 @@ import Header from './Header.jsx'
 import './style.css'
 import './styles/CustomSelectStyle.css'
 import './styles/lineChartStyle.css'
+import FilterPage from './FilterPage.jsx'
 
 const router = createBrowserRouter([
     {
@@ -14,6 +15,10 @@ const router = createBrowserRouter([
             {
                 path: '/',
                 element: <Home />
+            },
+            {
+                path: '/filter-page',
+                element: <FilterPage />
             }
         ]
     }

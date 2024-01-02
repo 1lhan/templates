@@ -33,14 +33,21 @@ header {
 
     nav {
         @include flex(row, flex-start, center);
+        gap: 0.5rem;
         max-width: 1400px;
         height: 100%;
         margin: 0 auto;
         padding: 0 0.25rem;
+
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
     }
 }
 
-.home {
+.home,
+.filter-page {
     @include flex(row, flex-start, flex-start);
     flex-wrap: wrap;
     gap: 1rem 0.5rem;
@@ -49,13 +56,36 @@ header {
     padding: 1rem 0.5rem;
     color: #fff;
 
+    .filters {
+        @include flex(row, flex-start, flex-start);
+        gap: 1rem;
+
+        .filters-item {
+            @include flex(column, flex-start, flex-start);
+            gap: 0.5rem;
+            background: $bg-primary-1;
+            padding: 0.25rem 0;
+
+            label {
+                @include flex(row, flex-start, center);
+                gap: 0.25rem;
+                width: 100%;
+                padding: 0.25rem 0.5rem;
+
+                input {
+                    width: 0.75rem;
+                }
+            }
+        }
+    }
+
     .column-chart-container {
         width: 100%;
         max-width: 25rem;
         aspect-ratio: 2/1;
     }
 
-    .line-chart-container{
+    .line-chart-container {
         width: 100%;
         max-width: 100%;
     }

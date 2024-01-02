@@ -19,13 +19,19 @@ header nav {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+  gap: 0.5rem;
   max-width: 1400px;
   height: 100%;
   margin: 0 auto;
   padding: 0 0.25rem;
 }
+header nav a {
+  text-decoration: none;
+  color: #fff;
+}
 
-.home {
+.home,
+.filter-page {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -37,12 +43,46 @@ header nav {
   padding: 1rem 0.5rem;
   color: #fff;
 }
-.home .column-chart-container {
+.home .filters,
+.filter-page .filters {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.home .filters .filters-item,
+.filter-page .filters .filters-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0.5rem;
+  background: #1f2a48;
+  padding: 0.25rem 0;
+}
+.home .filters .filters-item label,
+.filter-page .filters .filters-item label {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.25rem;
+  width: 100%;
+  padding: 0.25rem 0.5rem;
+}
+.home .filters .filters-item label input,
+.filter-page .filters .filters-item label input {
+  width: 0.75rem;
+}
+.home .column-chart-container,
+.filter-page .column-chart-container {
   width: 100%;
   max-width: 25rem;
   aspect-ratio: 2/1;
 }
-.home .line-chart-container {
+.home .line-chart-container,
+.filter-page .line-chart-container {
   width: 100%;
   max-width: 100%;
 }/*# sourceMappingURL=style.css.map */
