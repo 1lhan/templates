@@ -4,7 +4,7 @@ export default function Header() {
     return (
         <header>
             <nav>
-                <h2>Templates</h2>
+                <NavLink to='/'>Templates</NavLink>
                 <NavLink to='/filter-page'>Filter Page</NavLink>
             </nav>
         </header>

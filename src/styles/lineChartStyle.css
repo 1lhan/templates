@@ -47,7 +47,7 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  width: 7.5%;
+  width: 5%;
   height: 100%;
 }
 .line-chart .chart-body .vertical-points .vertical-points-item {
@@ -68,7 +68,7 @@
 }
 .line-chart .chart-body .chart {
   position: relative;
-  width: 90%;
+  width: 92.5%;
   height: 100%;
 }
 .line-chart .chart-body .chart .dot {
@@ -80,10 +80,11 @@
   z-index: 3;
 }
 .line-chart .chart-body .chart .dot .dot-children {
-  width: 200%;
-  height: 200%;
+  width: 400%;
+  height: 400%;
+  border-radius: 50%;
   background: transparent;
-  transform: translate(-25%, -25%);
+  transform: translate(-37.5%, -37.5%);
   z-index: 3;
 }
 .line-chart .chart-body .chart .tool-tip {
@@ -229,6 +230,43 @@
   }
   .line-chart .chart-footer {
     font-size: 0.5rem;
+    padding: 0.25rem 0;
+  }
+}
+@media (width < 425px) {
+  .line-chart .chart-header {
+    font-size: 0.5rem;
+    padding: 0.25rem 1.25%;
+  }
+  .line-chart .chart-header .buttons {
+    gap: 0.25rem;
+  }
+  .line-chart .chart-header .buttons button {
+    padding: 0.1rem 0.15rem;
+    font-size: 0.5rem;
+  }
+  .line-chart .chart-body {
+    aspect-ratio: 2/0.75;
+  }
+  .line-chart .chart-body .vertical-points {
+    font-size: 0.5rem;
+  }
+  .line-chart .chart-body .vertical-points .vertical-points-item span {
+    margin-right: 0.125rem;
+  }
+  .line-chart .chart-body .chart .dot {
+    width: 1px;
+    height: 1px;
+  }
+  .line-chart .chart-body .chart .chart-line {
+    height: 1px;
+  }
+  .line-chart .chart-body .chart .tool-tip {
+    padding: 0.25rem;
+    font-size: 0.5rem;
+  }
+  .line-chart .chart-footer {
+    font-size: 0.4rem;
     padding: 0.25rem 0;
   }
 }/*# sourceMappingURL=lineChartStyle.css.map */

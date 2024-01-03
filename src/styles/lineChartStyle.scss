@@ -39,7 +39,7 @@
 
         .vertical-points {
             @include flex(column, flex-start, flex-start);
-            width: 7.5%;
+            width: 5%;
             height: 100%;
 
             .vertical-points-item {
@@ -61,7 +61,7 @@
 
         .chart {
             position: relative;
-            width: 90%;
+            width: 92.5%;
             height: 100%;
 
             .dot {
@@ -73,10 +73,11 @@
                 z-index: 3;
 
                 .dot-children {
-                    width: 200%;
-                    height: 200%;
+                    width: 400%;
+                    height: 400%;
+                    border-radius: 50%;
                     background: transparent;
-                    transform: translate(-25%, -25%);
+                    transform: translate(-37.5%, -37.5%);
                     z-index: 3;
                 }
             }
@@ -203,7 +204,7 @@
 
                 button {
                     padding: 0.125rem 0.2rem;
-                    font-size: 0.5rem
+                    font-size: 0.5rem;
                 }
             }
         }
@@ -240,6 +241,57 @@
 
         .chart-footer {
             font-size: 0.5rem;
+            padding: 0.25rem 0;
+        }
+    }
+
+    @media (width<425px) {
+        .chart-header {
+            font-size: 0.5rem;
+            padding: 0.25rem 1.25%;
+
+            .buttons {
+                gap: 0.25rem;
+
+                button {
+                    padding: 0.1rem 0.15rem;
+                    font-size: 0.5rem;
+                }
+            }
+        }
+
+        .chart-body {
+            aspect-ratio: 2/0.75;
+
+            .vertical-points {
+                font-size: 0.5rem;
+
+                .vertical-points-item {
+                    span {
+                        margin-right: 0.125rem;
+                    }
+                }
+            }
+
+            .chart {
+                .dot {
+                    width: 1px;
+                    height: 1px;
+                }
+
+                .chart-line {
+                    height: 1px;
+                }
+
+                .tool-tip {
+                    padding: 0.25rem;
+                    font-size: 0.5rem;
+                }
+            }
+        }
+
+        .chart-footer {
+            font-size: 0.4rem;
             padding: 0.25rem 0;
         }
     }

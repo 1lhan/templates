@@ -83,7 +83,9 @@ export default function LineChart({ data, headerText, valueKey, horizontalAreaKe
                 <div id="chart" className="chart">
                     {processedData.value.map((item, index) =>
                         <div className="dot" style={{ bottom: item.distanceFromBottom + '%', left: item.distanceFromLeft + '%', background: dotBg }} key={index}>
-                            <div className="dot-children" onMouseOver={() => toolTip.value = index} onMouseLeave={() => toolTip.value = -1} />
+                            <div className="dot-children"
+                                onMouseOver={(e) => { toolTip.value = index; e.target.style.background = dotBg }}
+                                onMouseLeave={(e) => { toolTip.value = -1; e.target.style.background = 'transparent' }} />
                         </div>
                     )}
                     {toolTip != -1 &&

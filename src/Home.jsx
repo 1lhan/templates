@@ -11,7 +11,7 @@ export default function Home() {
         { date: "16.01.2023", value: 68 }, { date: "17.01.2023", value: 33 }, { date: "18.01.2023", value: 92 }, { date: "19.01.2023", value: 45 }, { date: "20.01.2023", value: 60 },
         { date: "21.01.2023", value: 19 }, { date: "22.01.2023", value: 82 }, { date: "23.01.2023", value: 27 }, { date: "24.01.2023", value: 53 }, { date: "25.01.2023", value: 88 },
         { date: "26.01.2023", value: 31 }, { date: "27.01.2023", value: 75 }, { date: "28.01.2023", value: 10 }, { date: "29.01.2023", value: 67 }, { date: "30.01.2023", value: 41 },
-        { date: "31.01.2023", value: 50 }
+        { date: "31.01.2023", value: 50 }, { date: "01.02.2023", value: 64 }
     ]
 
 
